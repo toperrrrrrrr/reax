@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+
+:root {
+  --delay: 0s;
+  --dark1: #0d0e1c;
+  --dark2: #262942;
+  --color-text: aliceblue;
+  --color-bg: #262942;
+  --color-shadow: rgba(0, 0, 0, 0.6);
+  --color-box: #555b96;
+  --color-box-hover: #3a3842;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color:whitesmoke;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  
+}
+
+.screen-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--dark1), var(--dark2));
+  color: #9b9ca7;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-box {
+  background: var(--color-bg);
+  padding: 40px;
+  box-shadow: 0 15px 25px var(--color-shadow);
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  min-width: 420px;
+  min-height: 568px;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+.login-form {
+  z-index: 10;
+  width: 100%;
+}
+
+.input-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  background: var(--color-bg);
+  width: 300px;
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  text-align: justify;
+  padding-left: 15px;
+  border: none;
+  box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+    inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+    inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4),
+    5px 5px 10px 2.5px rgba(0, 0, 0, 0.2);
+}
+
+
+.login-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+} 
+
+
+.login-button {
+  top: 0;
+  margin: 5px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: autos;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+}
+
+
+.form-btn {
+  text-align: center;
+  border: #262942;
+  box-shadow: 0 15px 25px var(--color-shadow);
+  margin: 5px;
+  border-radius: 15px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  cursor: pointer;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px 5px rgba(77, 71, 100, 0.4),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  transition: background 0.1s ease-in-out;
+  margin-top: 25px;
+}
+
+.form-btn:hover {
+  background: var(--color-box);
+}
+
+.form-btn:active {
+  box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  background: var(--color-box-hover);
+}
+
+
+.eyes{
+  fill:aliceblue;
+  padding: 5px;
+}
+
+.eye-button {
+  text-align: center;
+  border: #262942;
+  box-shadow: 0 15px 25px var(--color-shadow);
+  margin: 5px;
+  border-radius: 100px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  cursor: pointer;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px 5px rgba(77, 71, 100, 0.4),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  transition: background 0.1s ease-in-out;
+  margin-top: 25px;
+}
