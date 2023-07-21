@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./mycss.css";
-import Alerts from "./Alerts/Alerts";
-import Clock from "./Clock";
-import Sidebar from "./Sidebar";
+import Alerts from "../alerts/Alerts";
+import Clock from "../../etc/Clock";
+import Sidebar from "../../fragments/sidebar/Sidebar";
 
 const Dashboard = ({ capturedtime }) => {
   const navigate = useNavigate();

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./mycss.css";
-import bg from "../img/bg.svg";
+import bg from "../../img/bg.svg";
 import Axios from "axios";
 
 const Register = () => {
@@ -82,14 +79,14 @@ const Register = () => {
         <img src={bg} className="logo"></img>
         <div className="login-box">
           <div className="screen_content">
-            <Form className="login ">
-              <Button
+            <form className="login ">
+              <button
                 type="button"
                 className="box btn"
                 onClick={handleNavigateLogin}
               >
                 <div className="loginbutton">Login</div>
-              </Button>
+              </button>
               {isResponse.map((val) => {
                 return (
                   <>
@@ -123,30 +120,30 @@ const Register = () => {
                 onChange={(e) => setNewUsername(e.target.value)}
               ></input>
               <div className="confirmation-buttons">
-                <Button
+                <input
                   type="button"
                   className="box btn"
                   onClick={handleSubmit}
                 >
                   <div className="loginbutton">Submit</div>
-                </Button>
+                </input>
 
-                <Button
+                <input
                   type="button"
                   className="box btn"
                   onClick={handleDelete}
                 >
                   <div className="loginbutton">Delete {isID}</div>
-                </Button>
-                <Button
+                </input>
+                <input
                   type="button"
                   className="box btn"
                   onClick={handleUpdate}
                 >
                   <div className="loginbutton">Update</div>
-                </Button>
+                </input>
               </div>
-            </Form>
+            </form>
           </div>
         </div>
       </div>

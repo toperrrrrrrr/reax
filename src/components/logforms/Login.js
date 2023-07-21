@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import Alerts from "./Alerts/Alerts";
-import eyes from "../img/eye.svg";
+import Alerts from "../alerts/Alerts";
+import eyes from "../../img/eye.svg";
 
 const Login = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);

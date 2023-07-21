@@ -1,6 +1,5 @@
-import "./mycss.css";
-import bg from "../img/bg.svg";
-import are from "../img/areyoulost.webp";
+import bg from "../../img/bg.svg";
+import are from "../../img/areyoulost.webp";
 
 const NoPage = () => {
   return (
