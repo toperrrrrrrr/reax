@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Alerts.css";
 
 const Alerts = ({ isOpen, title, message, onClose, onConfirm, isHidden }) => {
     if (!isOpen) {

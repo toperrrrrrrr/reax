@@ -43,10 +43,11 @@ h1 {
 }
 
 .wrapper {
-  display: flex;
+
   height: 100vh;
   overflow:auto;
   margin: 0 auto;
+  flex: 1;
 }
 
 .left-side {

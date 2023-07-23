@@ -12,12 +12,6 @@
   --color-box-hover: #3a3842;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Raleway, sans-serif;
-}
 
 h6,
 h5,
@@ -45,6 +39,9 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+
+/* START OF LOGIN */
 
 .login-box {
   background: var(--color-bg);
@@ -165,3 +162,86 @@ h1 {
   transition: background 0.1s ease-in-out;
   margin-top: 25px;
 }
+
+
+/* END OF LOGIN */
+
+
+
+/* START OF ALERT*/
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  
+  .confirmation-box {
+    background: var(--color-bg);
+    padding: 20px;
+    border-radius: 5px;
+    width: 420px;
+  }
+  
+  .confirmation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .confirmation-buttonss {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .confirmation-buttons button {
+    margin-left: 10px;
+  }
+  
+  .alert-button {
+    top: 0;
+    margin: 5px;
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: autos;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+  }
+  
+  .alert-btn {
+    text-align: center;
+    border: #262942;
+    box-shadow: 0 15px 25px var(--color-shadow);
+    margin: 5px;
+    border-radius: 15px;
+    color: var(--color-text);
+    background: var(--color-bg);
+    cursor: pointer;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2),
+      -10px -10px 20px 5px rgba(77, 71, 100, 0.4),
+      -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+    transition: background 0.1s ease-in-out;
+    margin-top: 25px;
+  }
+  
+  .alert-btn:hover {
+    background: var(--color-box);
+  }
+  
+  .alert-btn:active {
+    box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
+      -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3),
+      -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+    background: var(--color-box-hover);
+  }
+  
