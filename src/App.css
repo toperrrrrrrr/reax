@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
-
 :root {
   --delay: 0s;
   --dark1: #0d0e1c;
@@ -12,6 +11,13 @@
   --color-box-hover: #3a3842;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  outline: none;
+}
 
 h6,
 h5,
@@ -19,14 +25,13 @@ h4,
 h3,
 h2,
 h1 {
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 .center-text {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 50px;
-  
 }
 
 .screen-bg {
@@ -39,7 +44,6 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 
 /* START OF LOGIN */
 
@@ -63,7 +67,7 @@ h1 {
   width: 100%;
 }
 
-.input-box{
+.input-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,13 +96,11 @@ h1 {
     5px 5px 10px 2.5px rgba(0, 0, 0, 0.2);
 }
 
-
 .login-button-container {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
-} 
-
+}
 
 .login-button {
   top: 0;
@@ -112,7 +114,6 @@ h1 {
   border-width: 0 6px 6px 0;
   display: inline-block;
 }
-
 
 .form-btn {
   text-align: center;
@@ -141,9 +142,8 @@ h1 {
   background: var(--color-box-hover);
 }
 
-
-.eyes{
-  fill:aliceblue;
+.eyes {
+  fill: aliceblue;
   padding: 5px;
 }
 
@@ -163,85 +163,154 @@ h1 {
   margin-top: 25px;
 }
 
-
 /* END OF LOGIN */
-
-
 
 /* START OF ALERT*/
 .confirmation-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-  }
-  
-  .confirmation-box {
-    background: var(--color-bg);
-    padding: 20px;
-    border-radius: 5px;
-    width: 420px;
-  }
-  
-  .confirmation-buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-  }
-  
-  .confirmation-buttonss {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
-  }
-  
-  .confirmation-buttons button {
-    margin-left: 10px;
-  }
-  
-  .alert-button {
-    top: 0;
-    margin: 5px;
-    width: auto;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    height: autos;
-    border-width: 0 6px 6px 0;
-    display: inline-block;
-  }
-  
-  .alert-btn {
-    text-align: center;
-    border: #262942;
-    box-shadow: 0 15px 25px var(--color-shadow);
-    margin: 5px;
-    border-radius: 15px;
-    color: var(--color-text);
-    background: var(--color-bg);
-    cursor: pointer;
-    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2),
-      -10px -10px 20px 5px rgba(77, 71, 100, 0.4),
-      -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
-    transition: background 0.1s ease-in-out;
-    margin-top: 25px;
-  }
-  
-  .alert-btn:hover {
-    background: var(--color-box);
-  }
-  
-  .alert-btn:active {
-    box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
-      -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3),
-      -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
-    background: var(--color-box-hover);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.confirmation-box {
+  background: var(--color-bg);
+  padding: 20px;
+  border-radius: 5px;
+  width: 420px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.confirmation-buttonss {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.confirmation-buttons button {
+  margin-left: 10px;
+}
+
+.alert-button {
+  top: 0;
+  margin: 5px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: autos;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+}
+
+.alert-btn {
+  text-align: center;
+  border: #262942;
+  box-shadow: 0 15px 25px var(--color-shadow);
+  margin: 5px;
+  border-radius: 15px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  cursor: pointer;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px 5px rgba(77, 71, 100, 0.4),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  transition: background 0.1s ease-in-out;
+  margin-top: 25px;
+}
+
+.alert-btn:hover {
+  background: var(--color-box);
+}
+
+.alert-btn:active {
+  box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  background: var(--color-box-hover);
+}
+/* END OF ALERTS */
+
+/* DASHBOARD  */
+
+.wrapper {
+  height: 100vh;
+  overflow: auto;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.dashboard-box {
+  background: var(--color-bg);
+  overflow-x: auto;
+  display: flex;
+  margin: 20px;
+  width: fit-content;
+  height: 90%;
+  padding: 30px;
+  box-shadow: 0 15px 25px var(--color-shadow);
+  border-radius: 10px;
+}
+
+.sidebar {
+  width: 70px;
+  height: 100vh;
+  background: var(--color-bg);
+  transition: width 0.3s;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.sidebar:hover {
+  width: 140px;
+}
+
+.sidebar p {
+  visibility: hidden;
+  margin-bottom: 5px;
+}
+
+.sidebar:hover p {
+  visibility: visible;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 117px 0 40px;
+  -webkit-animation: left 1s var(--delay) both;
+  animation: left 1s var(--delay) both;
+}
+
+.sidebar-content svg {
+  width: 20px;
+  cursor: pointer;
+}
+
+.sidebar-content svg + svg {
+  margin-top: 34px;
+}
+
+.sidebar-content svg:last-child {
+  margin-top: auto;
+}
+
+.sidebar-content svg.active,
+.sidebar-content svg:hover {
+  color: white;
+}

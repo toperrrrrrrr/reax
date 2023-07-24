@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Dashboard.css";
 import Alerts from "../alerts/Alerts";
 import Clock from "../../etc/Clock";
 import Sidebar from "../../fragments/sidebar/Sidebar";
@@ -34,12 +33,13 @@ const Dashboard = ({ capturedtime }) => {
   return (
     <div className="screen-bg">
 
-<Sidebar></Sidebar>
+<Sidebar
+
+logout={handleOpenPopup}/>
       <div class="wrapper ">
         <div>
           <div className="dashboard-box">
             <div className="login-box">
-              {" "}
               <Clock />
             </div>
             <ul>
@@ -77,7 +77,6 @@ const Dashboard = ({ capturedtime }) => {
             </ul>
           </div>
 
-          <div className="bottom-border "></div>
           <Alerts
             isOpen={showPopup}
             title="Log Out?"
