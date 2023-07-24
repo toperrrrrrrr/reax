@@ -291,4 +291,4 @@ h6,h5,h4,h3,h2,h1 {
 .checkbox__1 input:checked ~ label i,
 .checkbox__2 input:checked ~ label i {
   color: var(--primary);
-} */
+/* } *
