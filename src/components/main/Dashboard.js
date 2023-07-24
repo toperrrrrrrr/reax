@@ -34,7 +34,7 @@ const Dashboard = ({ capturedtime }) => {
     <div className="screen-bg">
 
 <Sidebar
-
+horiScroll={horiScroll}
 logout={handleOpenPopup}/>
       <div class="wrapper ">
         <div>
