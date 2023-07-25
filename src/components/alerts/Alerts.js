@@ -6,7 +6,7 @@ const Alerts = ({ isOpen, title, message, onClose, onConfirm, isHidden }) => {
     }
     return (
         <>
-        <div className="confirmation-overlay">
+        <div className="confirmation-overlay" onClick={onClose}>
             <div className="confirmation-box">
             <h2>{title}</h2>
             <p>{message}</p>

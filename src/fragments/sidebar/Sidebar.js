@@ -12,7 +12,6 @@ const Sidebar = ({ logout, horiScroll }) => {
         </a>
       </span>
       <div class="side-wrapper">
-        <div class="side-title">MENU</div>
         <div class="side-menu">
           <a class="sidebar-link is-active" href="#">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -30,11 +29,7 @@ const Sidebar = ({ logout, horiScroll }) => {
             </svg>
             Trending
           </a>
-        </div>
-      </div>
-      <div class="side-wrapper">
-        <div class="side-title">CATEGORY</div>
-        <div class="side-menu">
+     
           <a class="sidebar-link" href="#">
             <svg
               viewBox="0 0 512 512"

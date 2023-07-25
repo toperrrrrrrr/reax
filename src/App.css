@@ -14,6 +14,7 @@
 
 
 
+
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -44,17 +45,10 @@ body {
 }
 
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-  width: 6px;
-  border-radius: 10px;
+ul{
+  padding: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba(21, 20, 26, 0.63);
-  border-radius: 10px;
-}
-/* SCROLLBAR */
 
 h6,
 h5,
@@ -84,6 +78,19 @@ h1{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(21, 20, 26, 0.63);
+  border-radius: 10px;
+}
+/* SCROLLBAR */
 
 /* START OF LOGIN */
 
@@ -350,9 +357,6 @@ h1{
   margin-top: 34px;
 }
 
-.sidebar-content svg:last-child {
-  margin-top: auto;
-}
 
 .sidebar-content svg.active,
 .sidebar-content svg:hover {
@@ -382,6 +386,7 @@ h1{
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  
   transition-duration: 0.2s;
   overflow-y: auto;
   overflow-x: hidden;
@@ -485,27 +490,23 @@ h1{
 }
 
 
-.search-bar {
+.time {
   height: 34px;
   display: flex;
   width: 100%;
   max-width: 450px;
 }
-.search-bar input {
+.time .clock {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: var(--button-bg);
   border-radius: 8px;
-  font-family: var(--body-font);
   font-size: 14px;
   font-weight: 500;
   padding: 0 40px 0 16px;
   box-shadow: 0 0 0 2px rgba(134, 140, 160, 0.02);
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
-  background-size: 14px;
-  background-repeat: no-repeat;
-  background-position: 96%;
+   background-size: 14px;
+
   color: #fff;
 }
 
@@ -580,7 +581,7 @@ h1{
   color: #fff;
   font-weight: 700;
   padding-bottom: 20px;
-  position: sticky;
+  padding-top: 40px;
   top: 0;
   left: 0;
 }
@@ -607,7 +608,7 @@ h1{
   padding: 30px;
   border-radius: 20px;
   align-self: stretch;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 }
 .main-blog + .main-blog {
@@ -666,7 +667,7 @@ h1{
   position: relative;
   background-color: #22b07d;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: auto;
   height: 200px;
   transition: 0.4s;
 }

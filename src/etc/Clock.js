@@ -26,12 +26,12 @@ const Clock = () => {
   };
 
   return (
-    <div>
-      <h1>{time.toLocaleTimeString()}</h1>
-      <button onClick={captureTime}>Capture Time</button>
-      <p>{currentDate}</p>
-      {capturedTime && <p>Captured Time: {capturedTime}</p>}
-    </div>
+    <span className="time">
+      <h2 className="clock">{time.toLocaleTimeString()}</h2>
+      <button className="clock" onClick={captureTime} hidden >Capture Time</button>
+      <p className="clock" hidden>{currentDate}</p>
+      {capturedTime && <p hidden> Captured Time: {capturedTime}</p>}
+    </span>
   );
 };
 
