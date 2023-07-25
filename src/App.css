@@ -436,18 +436,6 @@ h1{
   color: #fff;
   font-weight: 600;
 }
-.sidebar-link:hover:nth-child(2n + 1) svg,
-.sidebar-link.is-active:nth-child(2n + 1) svg {
-  background: #ff7551;
-}
-.sidebar-link:hover:nth-child(2n) svg,
-.sidebar-link.is-active:nth-child(2n) svg {
-  background: #32a7e2;
-}
-.sidebar-link:hover:nth-child(2n + 3) svg,
-.sidebar-link.is-active:nth-child(2n + 3) svg {
-  background: #6c5ecf;
-}
 
 .side-wrapper {
   padding: 36px 0;
@@ -483,7 +471,7 @@ h1{
 }
 
 /* TOPBAR */
-.top-wrapper {
+.wrapper-center {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -595,13 +583,6 @@ h1{
   position: sticky;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    to bottom,
-    #1f1d2b 0%,
-    #1f1d2b 78%,
-    rgba(31, 29, 43, 0) 100%
-  );
-  z-index: 11;
 }
 
 .small-header {
@@ -668,7 +649,7 @@ h1{
   bottom: 20px;
 }
 
-.videos {
+.contents {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
@@ -676,12 +657,12 @@ h1{
   grid-row-gap: 20px;
 }
 @media screen and (max-width: 980px) {
-  .videos {
+  .contents {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.video {
+.content {
   position: relative;
   background-color: #22b07d;
   border-radius: 20px;
