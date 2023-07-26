@@ -75,77 +75,74 @@ const Register = () => {
 
   return (
     <>
-      <div className="login-bg">
-        <img src={bg} className="logo"></img>
+      <div className="screen-bg">
         <div className="login-box">
-          <div className="screen_content">
-            <form className="login ">
-              <button
-                type="button"
-                className="box btn"
-                onClick={handleNavigateLogin}
-              >
-                <div className="loginbutton">Login</div>
-              </button>
-              {isResponse.map((val) => {
-                return (
-                  <>
-                    <p>
-                      {val.idUsers} {val.users_Username}{" "}
-                    </p>
-                  </>
-                );
-              })}
-              <h4> Register </h4>
-              <button
+          <form className="login-form">
+          <button
+              type="button"
+              className="box btn"
+              onClick={handleNavigateLogin}
+            >
+              <div className="loginbutton">Login</div>
+            </button>
+            {isResponse.map((val) => {
+              return (
+                <>
+                  <p>
+                    {val.idUsers} {val.users_Username}{" "}
+                  </p>
+                </>
+              );
+            })}
+
+            <h1 className="center-text">Register</h1>
+            <h6> Username</h6>
+            <div className="input-box">
+              <input
                 type="text"
                 placeholder="Username"
                 className="username"
                 onChange={(e) => setUsername(e.target.value)}
-              ></button>
-
-              <button
+              ></input>
+            </div>
+            <h6> Password</h6>
+            <div className="input-box input-container">
+              <input
                 type="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-              ></button>
-              <button
+              ></input>
+            </div>{" "}
+            <div className="input-box input-container">
+              <input
                 type="text"
                 placeholder="ID"
                 onChange={(e) => setId(e.target.value)}
-              ></button>
-              <button
-                type="text"
-                placeholder="newusername"
-                onChange={(e) => setNewUsername(e.target.value)}
-              ></button>
-              <div className="confirmation-buttons">
-                <button
-                  type="button"
-                  className="box btn"
-                  onClick={handleSubmit}
-                >
-                  <div className="loginbutton">Submit</div>
-                </button>
+              ></input>
+            </div>
+            <div className="input-box input-container">
+            <input
+              type="text"
+              placeholder="newusername"
+              onChange={(e) => setNewUsername(e.target.value)}
+            ></input>
+            </div>
+            <div className="login-button-container">
+            <button type="button" className="box btn" onClick={handleSubmit}>
+                <div className="loginbutton">Submit</div>
+              </button>
 
-                <button
-                  type="button"
-                  className="box btn"
-                  onClick={handleDelete}
-                >
-                  <div className="loginbutton">Delete {isID}</div>
-                </button>
-                <button
-                  type="button"
-                  className="box btn"
-                  onClick={handleUpdate}
-                >
-                  <div className="loginbutton">Update</div>
-                </button>
-              </div>
-            </form>
-          </div>
+              <button type="button" className="box btn" onClick={handleDelete}>
+                <div className="loginbutton">Delete {isID}</div>
+              </button>
+              <button type="button" className="box btn" onClick={handleUpdate}>
+                <div className="loginbutton">Update</div>
+              </button>
+              
+            </div>
+          </form>
         </div>
+       
       </div>
     </>
   );
