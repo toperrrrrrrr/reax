@@ -32,6 +32,7 @@ const Dashboard = ({ capturedtime }) => {
 
   return (
     <div className="bg-container">
+    
       <Sidebar horiScroll={horiScroll} logout={handleOpenPopup} />
       <div className="wrapper-center">
         <Topbar />

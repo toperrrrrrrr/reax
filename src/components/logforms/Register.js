@@ -97,51 +97,51 @@ const Register = () => {
                 );
               })}
               <h4> Register </h4>
-              <input
+              <button
                 type="text"
                 placeholder="Username"
                 className="username"
                 onChange={(e) => setUsername(e.target.value)}
-              ></input>
+              ></button>
 
-              <input
+              <button
                 type="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-              ></input>
-              <input
+              ></button>
+              <button
                 type="text"
                 placeholder="ID"
                 onChange={(e) => setId(e.target.value)}
-              ></input>
-              <input
+              ></button>
+              <button
                 type="text"
                 placeholder="newusername"
                 onChange={(e) => setNewUsername(e.target.value)}
-              ></input>
+              ></button>
               <div className="confirmation-buttons">
-                <input
+                <button
                   type="button"
                   className="box btn"
                   onClick={handleSubmit}
                 >
                   <div className="loginbutton">Submit</div>
-                </input>
+                </button>
 
-                <input
+                <button
                   type="button"
                   className="box btn"
                   onClick={handleDelete}
                 >
                   <div className="loginbutton">Delete {isID}</div>
-                </input>
-                <input
+                </button>
+                <button
                   type="button"
                   className="box btn"
                   onClick={handleUpdate}
                 >
                   <div className="loginbutton">Update</div>
-                </input>
+                </button>
               </div>
             </form>
           </div>

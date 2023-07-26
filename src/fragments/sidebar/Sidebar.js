@@ -27,7 +27,7 @@ const Sidebar = ({ logout, horiScroll }) => {
             </svg>
             Trending
           </a>
-     
+
           <a class="sidebar-link" href="#">
             <svg
               viewBox="0 0 512 512"
