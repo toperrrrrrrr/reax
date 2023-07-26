@@ -85,7 +85,6 @@ const Dashboard = ({ capturedtime }) => {
           </div>
           <div className="main-header">LOREM </div>
           <div className="main-blogs">
-            
             <div className="main-blog ">
               <ul>
                 <li>

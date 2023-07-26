@@ -5,8 +5,9 @@ const Topbar = () => {
   return (
     <div className="header">
       <div className="time">
-        <span className="clock" ><Clock/></span> 
-      
+        <span className="clock">
+          <Clock />
+        </span>
       </div>
       <div class="user-settings">
         <img
