@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alerts from "../alerts/Alerts";
-import Sidebar from "../../fragments/sidebar/Sidebar";
+import Sidebar from "../../fragments/Sidebar";
 import Topbar from "../../fragments/Topbar";
 
 const Dashboard = ({ capturedtime }) => {

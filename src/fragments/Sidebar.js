@@ -4,9 +4,9 @@ const Sidebar = ({ logout, horiScroll }) => {
   return (
     <div class="sidebar">
       <span class="logo">
-        S
+        L
         <a class="logo-expand" href="#">
-          Skateboard
+          LOGO
         </a>
       </span>
       <div class="side-wrapper">
