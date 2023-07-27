@@ -47,11 +47,6 @@ const Dashboard = ({ capturedtime }) => {
                   change to red and make it as clock out instead of green clock
                   in.
                 </li>
-                <li>Create more divs for different containers</li>
-                <li>
-                  Make another h1 that will show what time and date wasthe clock
-                  in or out.
-                </li>
                 <li>
                   Create different pages that will be inserted on this dashboard
                   pag that will show different functionalities
@@ -61,7 +56,6 @@ const Dashboard = ({ capturedtime }) => {
                   page
                 </li>
                 <li>add a check box for keep me signed in</li>
-                <li>Move the Eye button to next the password field</li>
                 <li>
                   Make a onKeypress function that will trigger the handlelogin
                   function
@@ -87,46 +81,13 @@ const Dashboard = ({ capturedtime }) => {
           <div className="main-header">LOREM </div>
           <div className="main-blogs">
             <div className="main-blog ">
-              <ul>
-                <li>
-                  Create a button that says clock in and a text box that will
-                  show you the time. After clicking the button, the button will
-                  change to red and make it as clock out instead of green clock
-                  in.
-                </li>
-                <li>Create more divs for different containers</li>
-                <li>
-                  Make another h1 that will show what time and date wasthe clock
-                  in or out.
-                </li>
-                <li>
-                  Create different pages that will be inserted on this dashboard
-                  pag that will show different functionalities
-                </li>
-                <li>
-                  Edit the Alerts for this page. Make it unniform with other
-                  page
-                </li>
-                <li>add a check box for keep me signed in</li>
-                <li>Move the Eye button to next the password field</li>
-                <li>
-                  Make a onKeypress function that will trigger the handlelogin
-                  function
-                </li>
-                <li>
-                  make sure that every actions are being logged into the back
-                  end
-                </li>
-              </ul>
             </div>
             <div className="main-blog "></div>
             <div className="main-blog "></div>
           </div>
           <div className="small-header">LOREM IPSUM</div>
           <div className="contents">
-            <div className="content" onClick={handleOpenPopup}>
-              waw
-            </div>
+           
             <div className="content "></div>
             <div class="content"></div>
             <div class="content"></div>
