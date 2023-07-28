@@ -16,9 +16,6 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-img {
-  max-width: 100%;
-}
 
 * {
   box-sizing: border-box;
@@ -302,6 +299,16 @@ h1 {
 
 /* DASHBOARD/SIDEBAR */
 
+.sidebar img{
+  max-width: 30px;
+  max-height: 70px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar:hover img{
+  max-width: 220px;
+  transition: all 0.3s ease-in-out;
+}
 
 .sidebar {
   width: 70px;
@@ -310,7 +317,6 @@ h1 {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-
   transition-duration: 0.2s;
   overflow-y: auto;
   overflow-x: hidden;
@@ -334,24 +340,8 @@ h1 {
 .sidebar:hover {
   width: 220px;
 }
-.sidebar .logo-expand {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease; /* Add a transition effect for a smoother switch */
-}
 
-.sidebar .logo {
-  opacity: 1;
-}
 
-.sidebar:hover .logo {
-  opacity: 0;
-}
-
-.sidebar:hover .logo-expand {
-  display: inline-block;
-  opacity: 1; 
-}
 
 .sidebar-link:hover,
 .sidebar-link.is-active {

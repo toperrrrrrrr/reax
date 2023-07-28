@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
 import lglong from "../img/Logoextended.png";
 import lgsmall from "../img/logosmall.png";
 
+
+
 const Sidebar = ({ logout, horiScroll }) => {
+
+
+  const [logoimg, setLogoimg] = useState(lgsmall);
+
+
+
+
+  const handleImg = () => {
+    setLogoimg(lglong);
+  };
+  
+  const handleImglv = () => {
+    setLogoimg(lgsmall);
+  };
+
+
+
+
   return (
-    <div class="sidebar">
+    <div class="sidebar" onMouseEnter={handleImg} onMouseLeave={handleImglv} >
       <span>
-      <a class="logo-expand" href="#">
-      <img src={lglong} class="expanded-img"></img>
-      </a>
-      <a class="logo" href="#">
-      <img src={lgsmall} class="small-img"></img>
+      <a class="" href="#">
+      <img src={logoimg}></img>
       </a>
      
       </span>
