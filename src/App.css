@@ -76,11 +76,13 @@ h1 {
 ::-webkit-scrollbar {
   width: 6px;
   border-radius: 10px;
+  max-height: 10%;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: wheat;
   border-radius: 10px;
+  
   
 }
 /* SCROLLBAR */
@@ -300,6 +302,7 @@ h1 {
 
 /* DASHBOARD/SIDEBAR */
 
+
 .sidebar {
   width: 70px;
   height: 100%;
@@ -332,31 +335,24 @@ h1 {
   width: 220px;
 }
 .sidebar .logo-expand {
-  visibility: hidden;
-  text-decoration: none;
-  color: #fff;
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 34px;
-  position: sticky;
-  top: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a transition effect for a smoother switch */
 }
 
 .sidebar .logo {
-  visibility: visible;
-  text-decoration: none;
-  color: #fff;
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 34px;
-  top: 0;
+  opacity: 1;
 }
+
 .sidebar:hover .logo {
-  visibility: hidden;
+  opacity: 0;
 }
+
 .sidebar:hover .logo-expand {
-  visibility: visible;
+  display: inline-block;
+  opacity: 1; 
 }
+
 .sidebar-link:hover,
 .sidebar-link.is-active {
   color: #fff;
