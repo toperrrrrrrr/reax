@@ -1,13 +1,19 @@
 import React from "react";
 
+import lglong from "../img/Logoextended.png";
+import lgsmall from "../img/logosmall.png";
+
 const Sidebar = ({ logout, horiScroll }) => {
   return (
     <div class="sidebar">
-      <span class="logo">
-        L
-        <a class="logo-expand" href="#">
-          LOGO
-        </a>
+      <span>
+      <a class="logo-expand" href="#">
+      <img src={lglong} class="expanded-img"></img>
+      </a>
+      <a class="logo" href="#">
+      <img src={lgsmall} class="small-img"></img>
+      </a>
+     
       </span>
       <div class="side-wrapper">
         <div class="side-menu">

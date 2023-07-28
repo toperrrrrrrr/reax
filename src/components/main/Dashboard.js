@@ -87,7 +87,6 @@ const Dashboard = ({ capturedtime }) => {
           </div>
           <div className="small-header">LOREM IPSUM</div>
           <div className="contents">
-           
             <div className="content "></div>
             <div class="content"></div>
             <div class="content"></div>
