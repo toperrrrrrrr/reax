@@ -72,7 +72,6 @@ const Login = () => {
                 type="text"
                 className="form-input"
                 required="" 
-                value={isUsername}
                 onChange={(e) => setUsername(e.target.value)}
               ></input>
               <label>Username</label>
