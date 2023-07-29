@@ -63,41 +63,56 @@ const Login = () => {
   return (
     <>
       <div className="screen-bg">
-        <div className="login-box">
+        <div class="login-box">
+       
+        <h2 className="center-text">Sign In</h2>
           <form className="login-form">
-            <h1 className="center-text">Sign In</h1>
-            <h6> Username</h6>
-            <div className="input-box">
+            <div class="user-box">
               <input
                 type="text"
                 className="form-input"
+                required="" 
                 value={isUsername}
-                placeholder="Administrator"
                 onChange={(e) => setUsername(e.target.value)}
               ></input>
+              <label>Username</label>
             </div>
-            <h6> Password</h6>
-            <div className="input-box input-container">
-              <input
+            <div class="user-box">
+               <input
                 type={isEye}
                 className="form-input"
-                placeholder="*********"
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
+              <label>Password</label>
             </div>
+            <a href="#">
+       
+              Submit
+            </a>
+
             <div className="login-button-container">
               <button type="button" className="form-btn" onClick={handleLogin}>
                 <div className="login-button">Login</div>
               </button>
               <button type="button" className="eye-button" onClick={eye}>
-              <img src={eyes} className="eyes"></img>
-            </button>
-            </div>
-            <div className="form-btn" onClick={register}>
-              Register Here.
+                <img src={eyes} className="eyes"></img>
+              </button>
             </div>
           </form>
         </div>
+
+        {/* 
+
+
+            <div className="input-box input-container">
+              
+            </div>
+
+            <div className="form-btn" onClick={register}>
+              Register Here.
+    
+          </form>
+        </div> */}
         <Alerts
           isOpen={showPopup}
           title="Wrong Credentials"

@@ -86,25 +86,93 @@ h1 {
 
 /* START OF LOGIN */
 
+
 .login-box {
   background: var(--color-bg);
   padding: 40px;
   box-shadow: 0 15px 25px var(--color-shadow);
-  border-radius: 10px;
   margin: 0 auto;
   width: 100%;
   max-width: 420px;
   min-width: 420px;
   min-height: 568px;
   margin: 0 auto;
-  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
   position: relative;
 }
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label  {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label  {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
 
 .login-form {
   z-index: 10;
   width: 100%;
 }
+
+
+
+
+.login-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.login-button {
+  top: 0;
+  margin: 5px;
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: autos;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+}
+/* 
 
 .input-box {
   display: flex;
@@ -135,25 +203,6 @@ h1 {
     5px 5px 10px 2.5px rgba(0, 0, 0, 0.2);
 }
 
-.login-button-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.login-button {
-  top: 0;
-  margin: 5px;
-  width: auto;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  height: autos;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-}
-
 .form-btn {
   text-align: center;
   border: #262942;
@@ -179,7 +228,7 @@ h1 {
     -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3),
     -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
   background: var(--color-box-hover);
-}
+} */
 
 .eyes {
   fill: aliceblue;
