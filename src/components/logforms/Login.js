@@ -121,7 +121,7 @@ const Login = () => {
 
 					<div class="form-group d-md-flex m-t-30" >
 						<div class="w-50">
-							<input type="checkbox" name="remember" checked>
+							<input type="checkbox" name="remember" checked />
 							<label class="checkbox-wrap checkbox-primary" for="remember">Remember Me</label>
 						</div>
 						<div class="w-50 text-md-right">
