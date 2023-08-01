@@ -193,9 +193,8 @@ h1 {
   padding-top: 3px;
 }
 
-.form-group {  align-items: center;
-  border-bottom-left-radius: var(--loginBorderRadius);
-  border-bottom-right-radius: var(--loginBorderRadius);
+.form-group {  
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
@@ -203,11 +202,7 @@ h1 {
 
 
 
-
-
-input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
-  padding: 0;
+.cbox {
   margin: 0;
 }
 
@@ -215,7 +210,6 @@ input[type=checkbox], input[type=radio] {
   width: 100%;
   display: block;
   position: relative;
-  z-index: 1;
   border-radius: 25px;
   overflow: hidden;
   margin: 0 auto;
@@ -227,7 +221,6 @@ input[type=checkbox], input[type=radio] {
 }
 .login100-form-bgbtn {
   position: absolute;
-  z-index: -1;
   width: 300%;
   height: 100%;
   background: darkslategrey;
