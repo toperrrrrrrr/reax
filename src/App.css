@@ -55,6 +55,12 @@ h1 {
 h1 {
   margin: 15px;
 }
+button {
+  border: none;
+  background: transparent;
+}
+
+
 .center-text {
   text-align: center;
   margin-top: 20px;
@@ -198,12 +204,6 @@ padding-top: 100px;
   padding-bottom: 20px;
 }
 
-
-
-.cbox {
-  margin: 0;
-}
-
 .wrap-login100-form-btn {
   width: 100%;
   display: block;
@@ -211,28 +211,13 @@ padding-top: 100px;
   border-radius: 25px;
   overflow: hidden;
   margin: 0 auto;
-  box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
-  -moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
-  -webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
-  -o-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
-  -ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  background-color:#555b96;
+  margin-top: 30px;
 }
-.login100-form-bgbtn {
-  position: absolute;
-  width: 300%;
-  height: 100%;
-  background: darkslategrey;
-  top: 0;
-  left: -100%;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
+
 .login100-form-btn {
-  font-family: Poppins-Medium;
-  font-size: 16px;
-  color: #fff;
+  color:#fff;
+  font-size: 18px;
   line-height: 1.2;
   text-transform: uppercase;
   display: -webkit-box;
@@ -246,10 +231,10 @@ padding-top: 100px;
   width: 100%;
   height: 50px;
 }
-button {
-  outline: none !important;
-  border: none;
-  background: transparent;
+
+.login100-form-btn:hover {
+  color: wheat;
+  background-color:#626bc2;
 }
 
 .text-center {

@@ -96,7 +96,7 @@ const Login = () => {
 
               <div className="form-group d-md-flex m-t-30">
                 <div className="w-50">
-                  <input type="checkbox" name="remember" className="cbox" />
+                  <input type="checkbox" name="remember"/>
                   <label
                     className="checkbox-wrap checkbox-primary"
                     for="remember"
