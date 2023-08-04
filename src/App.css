@@ -16,7 +16,6 @@ input {
 }
 
 html {
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,7 +63,6 @@ h1 {
 
 .screen-bg {
   display: flex;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient(180deg, var(--dark1), var(--dark2));
@@ -90,53 +88,58 @@ h1 {
 
 /* START OF LOGIN */
 
-.container-login100 {
+.container-login {
   width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-.wrap-login100 {
+.wrap-login {
   width: 500px;
-  background: #fff;
+  background: var(--dark2);
   border-radius: 10px;
   overflow: hidden;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 65px;
+  padding-bottom: 54px;
 }
 
-.login100-form {
-  width: 100%;
+@media screen and (max-width: 500px) {
+  .wrap-login {
+    border-radius: 0px;
+    height: 100vh;
+  }
+  
+.signin-title {
+padding-top: 100px;
 }
+  }
 
-.login100-form-title {
+.signin-title {
   display: block;
-  font-family: Poppins-Bold;
-  font-size: 39px;
-  color: #333333;
-  line-height: 1.2;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  color: white;
   text-align: center;
+  padding-bottom: 50px;
 }
+
+
 
 .wrap-input100 {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 23px;
 }
 
 .input100 {
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #333333;
+  color: wheat;
   line-height: 1.2;
   display: block;
   width: 100%;
@@ -163,7 +166,6 @@ h1 {
   left: 0;
   width: 0;
   height: 2px;
-  background: #7f7f7f;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
