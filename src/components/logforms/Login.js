@@ -67,7 +67,7 @@ const Login = () => {
         <div className="container-login">
           <form className="wrap-login">
               <span className="signin-title"> Sign in </span>
-              <div className="wrap-input100">
+              <div className="wrap-input">
                 <span>Username</span>
                 <input
                   className="input100"
@@ -80,7 +80,7 @@ const Login = () => {
               </div>
 
               <div
-                className="wrap-input100"
+                className="wrap-input"
                 data-validate="Password is required"
               >
                 <span>Password</span>
