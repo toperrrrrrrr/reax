@@ -8,6 +8,7 @@ const Login = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isUsername, setUsername] = useState("");
   const [isPassword, setPassword] = useState("");
+  const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
   const [isEye, setEye] = useState("password");
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
@@ -29,7 +30,11 @@ const Login = () => {
   const eye = () => {
     if (isEye === "password") {
       setEye("text");
-    } else setEye("password");
+      setPlaceholderPW("Type your password")
+    } else {
+      setEye("password");
+      setPlaceholderPW("******")
+    }
   };
 
   const register = () => {
@@ -82,8 +87,8 @@ const Login = () => {
               <span>Password</span>
               <input
                 className="inputs"
-                placeholder="Type your password"
                 type={isEye}
+                placeholder={isPlaceholderPW}
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -96,9 +101,9 @@ const Login = () => {
 
             <div className="form-group d-md-flex m-t-30">
               <div className="w-50">
-                <input type="checkbox" name="remember" />
+                <input type="checkbox" id="remember" className="cbox"/>
                 <label
-                  className="checkbox-wrap checkbox-primary"
+                  className="cbxLabel"
                   for="remember"
                 >
                   Remember Me
