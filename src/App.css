@@ -2,35 +2,28 @@
 
 :root {
   --delay: 0s;
-  --dark1: #0d0e1c;
-  --dark2: #262942;
-  --color-text: aliceblue;
+  --dark1: #1c1c28;
+  --dark2: #28293d;
+  --color-text: white;
   --color-bg: #262942;
   --color-shadow: rgba(0, 0, 0, 0.6);
   --color-box: #555b96;
   --color-box-hover: #3a3842;
+  --highlighs: #626bc2;
 }
 input {
   outline: none;
   border: none;
 }
 
-input[type=checkbox]{
-  color: brown;
-}
-a{
+a {
   text-decoration: none;
-  color: wheat;
+  color: white;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
+a:hover {
+  color: var(--highlighs);
 }
-
-span{
-  color: wheat;
-}
-
 
 * {
   box-sizing: border-box;
@@ -38,40 +31,33 @@ span{
   padding: 0;
   font-family: Raleway, sans-serif;
   outline: none;
+  color: white;
 }
 
 body {
   color: var(--color-text);
-  background: linear-gradient(70deg, var(--dark1), var(--dark2));
+  background: var(--dark1);
   display: flex;
   touch-action: pan-x pan-y;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
   padding: 20px;
 }
 
-h6,
-h5,
-h4,
-h3,
-h2,
-h1 {
-  color: whitesmoke;
-}
-
 h1 {
   margin: 15px;
 }
+
 button {
   border: none;
   background: transparent;
 }
-
 
 .center-text {
   text-align: center;
@@ -83,9 +69,6 @@ button {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  color: #9b9ca7;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* SCROLLBAR */
@@ -98,9 +81,8 @@ button {
 ::-webkit-scrollbar-thumb {
   background-color: wheat;
   border-radius: 10px;
-  
-  
 }
+
 /* SCROLLBAR */
 
 /* START OF LOGIN */
@@ -129,34 +111,28 @@ button {
     border-radius: 0px;
     height: 100vh;
   }
-  
-.signin-title {
-padding-top: 100px;
-}
+
+  .signin-title {
+    padding-top: 100px;
   }
+}
 
 .signin-title {
   display: block;
-  font-family: Raleway, sans-serif;
   font-size: 40px;
-  color: wheat;
   text-align: center;
   padding-bottom: 50px;
 }
 
-
-
 .wrap-input {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid wheat;
+  border-bottom: 2px solid ;
   margin-bottom: 23px;
 }
 
-.input100 {
-  font-family: Raleway, sans-serif;
+.inputs {
   font-size: 16px;
-  color: wheat;
   line-height: 1.2;
   display: block;
   width: 100%;
@@ -165,20 +141,10 @@ padding-top: 100px;
   padding: 0 7px 0 43px;
 }
 
-.focus-input100 {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
 
-.focus-input100::after {
+.loginicons::after {
   content: attr(data-symbol);
   font-family: Material-Design-Iconic-Font;
-  color: wheat;
   font-size: 22px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -195,7 +161,11 @@ padding-top: 100px;
   padding-top: 3px;
 }
 
-.form-group {  
+.loginicons:hover{
+color: #626bc2;
+}
+
+.form-group {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -209,12 +179,12 @@ padding-top: 100px;
   border-radius: 25px;
   overflow: hidden;
   margin: 0 auto;
-  background-color:#555b96;
+  background-color: #555b96;
   margin-top: 30px;
 }
 
 .login100-form-btn {
-  color:#fff;
+  color: #fff;
   font-size: 18px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -232,7 +202,7 @@ padding-top: 100px;
 
 .login100-form-btn:hover {
   color: wheat;
-  background-color:#626bc2;
+  background-color: #626bc2;
 }
 
 .text-center {
@@ -252,9 +222,6 @@ padding-top: 100px;
   color: #333333;
   text-transform: uppercase;
 }
-
-
-
 
 .login-box {
   background: var(--color-bg);
@@ -296,32 +263,29 @@ padding-top: 100px;
   outline: none;
   background: transparent;
 }
-.login-box .user-box label  {
+.login-box .user-box label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
   color: #fff;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label  {
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #03e9f4;
   font-size: 12px;
 }
 
-
 .login-form {
   z-index: 10;
   width: 100%;
 }
-
-
-
 
 .login-button-container {
   display: flex;
@@ -517,13 +481,13 @@ padding-top: 100px;
 
 /* DASHBOARD/SIDEBAR */
 
-.sidebar img{
+.sidebar img {
   max-width: 30px;
   max-height: 70px;
   transition: all 0.3s ease-in-out;
 }
 
-.sidebar:hover img{
+.sidebar:hover img {
   max-width: 220px;
   transition: all 0.3s ease-in-out;
 }
@@ -558,8 +522,6 @@ padding-top: 100px;
 .sidebar:hover {
   width: 220px;
 }
-
-
 
 .sidebar-link:hover,
 .sidebar-link.is-active {

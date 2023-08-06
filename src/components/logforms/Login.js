@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Alerts from "../alerts/Alerts";
-import eyes from "../../img/eye.svg";
 import "../../fonts/material.css";
 
 const Login = () => {
@@ -66,64 +65,61 @@ const Login = () => {
       <div className="screen-bg">
         <div className="container-login">
           <form className="wrap-login">
-              <span className="signin-title"> Sign in </span>
-              <div className="wrap-input">
-                <span>Username</span>
-                <input
-                  className="input100"
-                  type="text"
-                  placeholder="Type your username"
-                  required
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-                <span className="focus-input100" data-symbol="&#xf206;"></span>
-              </div>
+            <span className="signin-title"> Sign in </span>
+            <div className="wrap-input">
+              <span>Username</span>
+              <input
+                className="inputs"
+                type="text"
+                placeholder="Type your username"
+                required
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <span className="loginicons" data-symbol="&#xf206;"></span>
+            </div>
 
-              <div
-                className="wrap-input"
-                data-validate="Password is required"
-              >
-                <span>Password</span>
-                <input
-                  className="input100"
-                  placeholder="Type your password"
-                  type={isEye}
-                  required
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <span className="focus-input100" data-symbol="&#xf190;"></span>
-              </div>
+            <div className="wrap-input" data-validate="Password is required">
+              <span>Password</span>
+              <input
+                className="inputs"
+                placeholder="Type your password"
+                type={isEye}
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span
+                className="loginicons"
+                onClick={eye}
+                data-symbol="&#xf15c;"
+              ></span>
+            </div>
 
-              <div className="form-group d-md-flex m-t-30">
-                <div className="w-50">
-                  <input type="checkbox" name="remember"/>
-                  <label
-                    className="checkbox-wrap checkbox-primary"
-                    for="remember"
-                  >
-                    Remember Me
-                  </label>
-                </div>
-                <div className="w-50 text-md-right">
-                  <a href="#">Forgot Password</a>
-                </div>
+            <div className="form-group d-md-flex m-t-30">
+              <div className="w-50">
+                <input type="checkbox" name="remember" />
+                <label
+                  className="checkbox-wrap checkbox-primary"
+                  for="remember"
+                >
+                  Remember Me
+                </label>
               </div>
-              <div>
-                <div className="wrap-login100-form-btn" onClick={handleLogin}>
-                  <div className="login100-form-bgbtn"></div>
-                  <button className="login100-form-btn">Login</button>
-                </div>
+              <div className="w-50 text-md-right">
+                <a href="#">Forgot Password</a>
               </div>
-              <div className="text-center p-t-115">
-                <span className="txt1">Don’t have an account?</span>
-                <a className="txt2" onClick={register}>
-                  Sign Up
-                </a>
+            </div>
+            <div>
+              <div className="wrap-login100-form-btn" onClick={handleLogin}>
+                <div className="login100-form-bgbtn"></div>
+                <button className="login100-form-btn">Login</button>
               </div>
-              <button type="button" className="eye-button" onClick={eye}>
-                <img src={eyes} className="eyes"></img>
-              </button>
-     
+            </div>
+            <div className="text-center p-t-115">
+              <span className="txt1">Don’t have an account?</span>
+              <a className="txt2" onClick={register}>
+                Sign Up
+              </a>
+            </div>
           </form>
         </div>
 
