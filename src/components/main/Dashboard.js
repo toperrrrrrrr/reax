@@ -37,25 +37,11 @@ const Dashboard = ({ capturedtime }) => {
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
         <div className="main-container">
-          <div className="main-header">LOREM </div>
+          <div className="main-header">Kumpyot </div>
           <div className="main-blogs">
             <div className="main-blog ">
               <ul>
-                <li>
-                  Create a button that says clock in and a text box that will
-                  show you the time. After clicking the button, the button will
-                  change to red and make it as clock out instead of green clock
-                  in.
-                </li>
-                <li>
-                  Create different pages that will be inserted on this dashboard
-                  pag that will show different functionalities
-                </li>
-                <li>
-                  Edit the Alerts for this page. Make it unniform with other
-                  page
-                </li>
-                <li>add a check box for keep me signed in</li>
+
                 <li>
                   Make a onKeypress function that will trigger the handlelogin
                   function
