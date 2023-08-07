@@ -20,6 +20,19 @@
     padding-bottom: 54px;
   }
   
+  .randombox {
+    width: 500px;
+    background: var(--dark2);
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-wrap: block;
+    justify-content: left;
+    align-items: center;
+    margin-right: 100px;
+  }
+  
+
   @media screen and (max-width: 500px) {
     .wrap-login {
       border-radius: 0px;

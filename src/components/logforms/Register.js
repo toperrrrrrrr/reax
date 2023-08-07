@@ -55,7 +55,6 @@ const Register = () => {
 
   const handleDelete = async () => {
     const userId = isID; // Replace with the actual user id
-
     try {
       const response = await Axios.delete(
         `http://localhost:3001/api/delete/${userId}`
@@ -77,78 +76,83 @@ const Register = () => {
 
   return (
     <>
-      {/* <div className="screen-bg">
-        <div className="login-box">
-          <form className="login-form">
-          <button
-              type="button"
-              className="box btn"
-              onClick={handleNavigateLogin}
-            >
-              <div className="loginbutton">Login</div>
-            </button>
-            {isResponse.map((val) => {
-              return (
-                <>
-                  <p>
-                    {val.idUsers} {val.users_Username}{" "}
-                  </p>
-                </>
-              );
-            })}
-
-            <h1 className="center-text">Register</h1>
-            <h6> Username</h6>
-            <div className="input-box">
-              <input
-                type="text"
-                placeholder="Username"
-                className="username"
-                onChange={(e) => setUsername(e.target.value)}
-              ></input>
-            </div>
-            <h6> Password</h6>
-            <div className="input-box input-container">
-              <input
-                type="password"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              ></input>
-            </div>{" "}
-            <div className="input-box input-container">
-              <input
-                type="text"
-                placeholder="ID"
-                onChange={(e) => setId(e.target.value)}
-              ></input>
-            </div>
-            <div className="input-box input-container">
-            <input
-              type="text"
-              placeholder="newusername"
-              onChange={(e) => setNewUsername(e.target.value)}
-            ></input>
-            </div>
-            <div className="login-button-container">
-            <button type="button" className="box btn" onClick={handleSubmit}>
-                <div className="loginbutton">Submit</div>
-              </button>
-
-              <button type="button" className="box btn" onClick={handleDelete}>
-                <div className="loginbutton">Delete {isID}</div>
-              </button>
-              <button type="button" className="box btn" onClick={handleUpdate}>
-                <div className="loginbutton">Update</div>
-              </button>
-              
-            </div>
-          </form>
-        </div>
-       
-      </div> */}
-
       <div className="screen-bg">
         <div className="container-login">
+          {/* <div className="randombox">
+            <div className="login-box">
+              {isResponse.map((val) => {
+                return (
+                  <>
+                    <p>
+                      {val.idUsers} {val.users_Username}{" "}
+                    </p>
+                  </>
+                );
+              })}
+              <form className="login-form">
+                <button
+                  type="button"
+                  className="box btn"
+                  onClick={handleNavigateLogin}
+                ></button>
+                <h6> Username</h6>
+                <div className="input-box">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    className="username"
+                    onChange={(e) => setUsername(e.target.value)}
+                  ></input>
+                </div>
+                <h6> Password</h6>
+                <div className="input-box input-container">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                </div>{" "}
+                <div className="input-box input-container">
+                  <input
+                    type="text"
+                    placeholder="ID"
+                    onChange={(e) => setId(e.target.value)}
+                  ></input>
+                </div>
+                <div className="input-box input-container">
+                  <input
+                    type="text"
+                    placeholder="newusername"
+                    onChange={(e) => setNewUsername(e.target.value)}
+                  ></input>
+                </div>
+                <div className="login-button-container">
+                  <button
+                    type="button"
+                    className="box btn"
+                    onClick={handleSubmit}
+                  >
+                    <div className="login100-form-btn">Submit</div>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="box btn"
+                    onClick={handleDelete}
+                  >
+                    <div className="login100-form-btn">Delete {isID}</div>
+                  </button>
+                  <button
+                    type="button"
+                    className="box btn"
+                    onClick={handleUpdate}
+                  >
+                    <div className="login100-form-btn">Update</div>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div> */}
           <form className="wrap-login">
             <span className="signin-title"> Sign Up </span>
             <div className="wrap-input">
@@ -178,23 +182,19 @@ const Register = () => {
               <input className="inputs" required />
               <span className="loginicons" data-symbol="&#xf15c;"></span>
             </div>
-
             <div className="wrap-input" data-validate="Password is required">
               <span>Password</span>
               <input className="inputs" required />
               <span className="loginicons" data-symbol="&#xf15c;"></span>
             </div>
-
-   
             <div>
               <div className="wrap-login100-form-btn">
-                <div className="login100-form-bgbtn"></div>
                 <button className="login100-form-btn">Register</button>
               </div>
             </div>
             <div className="text-center p-t-60">
               <span className="txt1">Already have an account?</span>
-              <a className="txt2">Sign in</a>
+              <a className="txt2" onClick={handleNavigateLogin}>Sign in</a>
             </div>
           </form>
         </div>
