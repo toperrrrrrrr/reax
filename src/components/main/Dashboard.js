@@ -33,9 +33,9 @@ const Dashboard = ({ capturedtime }) => {
   return (
     <div className="bg-container">
     
-      <Sidebar horiScroll={horiScroll} logout={handleOpenPopup} />
+      <Sidebar horiScroll={horiScroll} />
       <div className="wrapper-center">
-        <Topbar />
+        <Topbar logout={handleOpenPopup} />
         <div className="main-container">
           <div className="main-header">LOREM </div>
           <div className="main-blogs">

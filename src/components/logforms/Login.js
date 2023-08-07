@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Alerts from "../alerts/Alerts";
+import "../../LoginReg.css"
 import "../../fonts/material.css";
 
 const Login = () => {

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import bg from "../../img/bg.svg";
 import Axios from "axios";
+
+import "../../LoginReg.css";
+import "../../fonts/material.css";
 
 const Register = () => {
   const [isUsername, setUsername] = useState("");
@@ -75,7 +77,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="screen-bg">
+      {/* <div className="screen-bg">
         <div className="login-box">
           <form className="login-form">
           <button
@@ -143,6 +145,59 @@ const Register = () => {
           </form>
         </div>
        
+      </div> */}
+
+      <div className="screen-bg">
+        <div className="container-login">
+          <form className="wrap-login">
+            <span className="signin-title"> Sign Up </span>
+            <div className="wrap-input">
+              <span>Username</span>
+              <input
+                className="inputs"
+                type="text"
+                placeholder="Type your username"
+                required
+              />
+              <span className="loginicons" data-symbol="&#xf206;"></span>
+            </div>
+
+            <div className="wrap-input">
+              <span>Email</span>
+              <input
+                className="inputs"
+                type="email"
+                placeholder="Type your username"
+                required
+              />
+              <span className="loginicons" data-symbol="&#xf206;"></span>
+            </div>
+
+            <div className="wrap-input" data-validate="Password is required">
+              <span>Password</span>
+              <input className="inputs" required />
+              <span className="loginicons" data-symbol="&#xf15c;"></span>
+            </div>
+
+            <div className="wrap-input" data-validate="Password is required">
+              <span>Password</span>
+              <input className="inputs" required />
+              <span className="loginicons" data-symbol="&#xf15c;"></span>
+            </div>
+
+   
+            <div>
+              <div className="wrap-login100-form-btn">
+                <div className="login100-form-bgbtn"></div>
+                <button className="login100-form-btn">Register</button>
+              </div>
+            </div>
+            <div className="text-center p-t-60">
+              <span className="txt1">Already have an account?</span>
+              <a className="txt2">Sign in</a>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
