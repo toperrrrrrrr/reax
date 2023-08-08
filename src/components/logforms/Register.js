@@ -194,7 +194,9 @@ const Register = () => {
             </div>
             <div className="text-center p-t-60">
               <span className="txt1">Already have an account?</span>
-              <a className="txt2" onClick={handleNavigateLogin}>Sign in</a>
+              <a className="txt2" onClick={handleNavigateLogin}>
+                Sign in
+              </a>
             </div>
           </form>
         </div>

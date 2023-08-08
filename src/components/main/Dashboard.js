@@ -32,7 +32,6 @@ const Dashboard = ({ capturedtime }) => {
 
   return (
     <div className="bg-container">
-    
       <Sidebar horiScroll={horiScroll} />
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
@@ -41,7 +40,6 @@ const Dashboard = ({ capturedtime }) => {
           <div className="main-blogs">
             <div className="main-blog ">
               <ul>
-
                 <li>
                   Make a onKeypress function that will trigger the handlelogin
                   function
@@ -66,8 +64,7 @@ const Dashboard = ({ capturedtime }) => {
           </div>
           <div className="main-header">LOREM </div>
           <div className="main-blogs">
-            <div className="main-blog ">
-            </div>
+            <div className="main-blog "></div>
             <div className="main-blog "></div>
             <div className="main-blog "></div>
           </div>

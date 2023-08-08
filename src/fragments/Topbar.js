@@ -1,7 +1,7 @@
 import React from "react";
 import Clock from "../etc/Clock";
 
-const Topbar = ({logout}) => {
+const Topbar = ({ logout }) => {
   return (
     <div className="header">
       <div className="time">
@@ -10,14 +10,13 @@ const Topbar = ({logout}) => {
         </span>
       </div>
       <div class="user-settings ">
-     
-          <img
-            class="user-img"
-            src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/301266446_3419967004994019_5330432090560501717_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFk9Lk0rTvRIrh2rmVE-Bs7AYr_cB8HkJ4Biv9wHweQnlh-H-jMzPf5T_z6wOU87_Zzuv52wWrExXl-oU4rhFsE&_nc_ohc=Qr3n1gnyQ5YAX_Rw4Zh&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfBVdHTvkYtHvUxjdd3zTafL-EYnZrNR3pjahJY4n2ZcYg&oe=64C51422"
-            alt=""
-          />
+        <img
+          class="user-img"
+          src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/301266446_3419967004994019_5330432090560501717_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFk9Lk0rTvRIrh2rmVE-Bs7AYr_cB8HkJ4Biv9wHweQnlh-H-jMzPf5T_z6wOU87_Zzuv52wWrExXl-oU4rhFsE&_nc_ohc=Qr3n1gnyQ5YAX_Rw4Zh&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfBVdHTvkYtHvUxjdd3zTafL-EYnZrNR3pjahJY4n2ZcYg&oe=64C51422"
+          alt=""
+        />
 
-          <div className="dropdown">
+        <div className="dropdown">
           <div className="user-name">Nori</div>
 
           <svg viewBox="0 0 492 492" fill="currentColor" className="dropbtn">
@@ -25,18 +24,15 @@ const Topbar = ({logout}) => {
           </svg>
 
           <div class="dropdown-content">
-          <a href="#"class="sidebar-link" onClick={logout}>
-            <svg viewBox="0 0 512 512" fill="currentColor">
-              <path d="M255.2 468.6H63.8a21.3 21.3 0 01-21.3-21.2V64.6c0-11.7 9.6-21.2 21.3-21.2h191.4a21.2 21.2 0 100-42.5H63.8A63.9 63.9 0 000 64.6v382.8A63.9 63.9 0 0063.8 511H255a21.2 21.2 0 100-42.5z" />
-              <path d="M505.7 240.9L376.4 113.3a21.3 21.3 0 10-29.9 30.3l92.4 91.1H191.4a21.2 21.2 0 100 42.6h247.5l-92.4 91.1a21.3 21.3 0 1029.9 30.3l129.3-127.6a21.3 21.3 0 000-30.2z" />{" "}
-            </svg>
-            Logout
-          </a>
-         
+            <a href="#" class="sidebar-link" onClick={logout}>
+              <svg viewBox="0 0 512 512" fill="currentColor">
+                <path d="M255.2 468.6H63.8a21.3 21.3 0 01-21.3-21.2V64.6c0-11.7 9.6-21.2 21.3-21.2h191.4a21.2 21.2 0 100-42.5H63.8A63.9 63.9 0 000 64.6v382.8A63.9 63.9 0 0063.8 511H255a21.2 21.2 0 100-42.5z" />
+                <path d="M505.7 240.9L376.4 113.3a21.3 21.3 0 10-29.9 30.3l92.4 91.1H191.4a21.2 21.2 0 100 42.6h247.5l-92.4 91.1a21.3 21.3 0 1029.9 30.3l129.3-127.6a21.3 21.3 0 000-30.2z" />{" "}
+              </svg>
+              Logout
+            </a>
           </div>
-          </div>
-    
-
+        </div>
       </div>
     </div>
   );

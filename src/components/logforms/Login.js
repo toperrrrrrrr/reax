@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Alerts from "../alerts/Alerts";
-import "../../LoginReg.css"
+import "../../LoginReg.css";
 import "../../fonts/material.css";
 
 const Login = () => {
@@ -31,10 +31,10 @@ const Login = () => {
   const eye = () => {
     if (isEye === "password") {
       setEye("text");
-      setPlaceholderPW("Type your password")
+      setPlaceholderPW("Type your password");
     } else {
       setEye("password");
-      setPlaceholderPW("******")
+      setPlaceholderPW("******");
     }
   };
 
@@ -102,11 +102,8 @@ const Login = () => {
 
             <div className="form-group d-md-flex m-t-30">
               <div className="w-50">
-                <input type="checkbox" id="remember" className="cbox"/>
-                <label
-                  className="cbxLabel"
-                  for="remember"
-                >
+                <input type="checkbox" id="remember" className="cbox" />
+                <label className="cbxLabel" for="remember">
                   Remember Me
                 </label>
               </div>
