@@ -40,14 +40,9 @@ const Dashboard = ({ capturedtime }) => {
           <div className="main-blogs">
             <div className="main-blog ">
               <ul>
-                <li>
-                  Make a onKeypress function that will trigger the handlelogin
-                  function
-                </li>
-                <li>
-                  make sure that every actions are being logged into the back
-                  end
-                </li>
+                <h1>
+                  Create 4 page separate for 4 crud functions.
+                </h1>
               </ul>
             </div>
             <div className="main-blog "></div>
