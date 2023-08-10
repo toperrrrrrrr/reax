@@ -3,10 +3,21 @@ import { useNavigate } from "react-router-dom";
 import Alerts from "../alerts/Alerts";
 import Sidebar from "../../fragments/Sidebar";
 import Topbar from "../../fragments/Topbar";
+import Dash from "../../fragments/Dash";
+import Crud from "../../fragments/Crud";
 
 const Dashboard = ({ capturedtime }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
+  const [showDashboard, setDashboard] = useState(true);
+
+  const showDashboard1 = () => {
+    setDashboard(true);
+  };
+
+  const showDashboard2 = () => {
+    setDashboard(false);
+  };
 
   const handleOpenPopup = () => {
     setShowPopup(true);
@@ -32,43 +43,15 @@ const Dashboard = ({ capturedtime }) => {
 
   return (
     <div className="bg-container">
-      <Sidebar horiScroll={horiScroll} />
+      <Sidebar
+        horiScroll={horiScroll}
+        Dash1={showDashboard1}
+        Dash2={showDashboard2}
+      />
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
         <div className="main-container">
-          <div className="main-header">Kumpyot </div>
-          <div className="main-blogs">
-            <div className="main-blog ">
-              <ul>
-                <h1>
-                  Create 4 page separate for 4 crud functions.
-                </h1>
-              </ul>
-            </div>
-            <div className="main-blog "></div>
-            <div className="main-blog "></div>
-          </div>
-          <div className="small-header">LOREM IPSUM</div>
-          <div className="contents">
-            <div className="content" onClick={handleOpenPopup}>
-              waw
-            </div>
-            <div className="content "></div>
-            <div class="content"></div>
-            <div class="content"></div>
-          </div>
-          <div className="main-header">LOREM </div>
-          <div className="main-blogs">
-            <div className="main-blog "></div>
-            <div className="main-blog "></div>
-            <div className="main-blog "></div>
-          </div>
-          <div className="small-header">LOREM IPSUM</div>
-          <div className="contents">
-            <div className="content "></div>
-            <div class="content"></div>
-            <div class="content"></div>
-          </div>
+          {showDashboard ? <Dash /> : <Crud />}
         </div>
       </div>
 
