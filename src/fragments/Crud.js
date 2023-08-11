@@ -9,9 +9,14 @@ export default function Crud() {
 
   return (
     <div>
-      <div className="main-header">Kumpyot </div>
-      <div className="main-blogs">
-        <div className="main-blog " style={containerStyle}>
+      <div className="main-header" >Kumpyot </div>
+      <div className="main-blogs" >
+        <div className="main-blog " style={containerStyle} >
+          <ul>
+            <h1>This is totally different content</h1>
+          </ul>
+        </div>
+        <div className="main-blog " style={containerStyle} >
           <ul>
             <h1>This is totally different content</h1>
           </ul>
