@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Dash4() {
+export default function Empty() {
   return (
     <div>
 

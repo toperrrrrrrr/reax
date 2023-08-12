@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Dash() {
+export default function Home() {
   return (
     <div>
-      <div className="main-header">Kumpyot </div>
+      <div className="main-header">Home </div>
       <div className="main-blogs">
         <div className="main-blog ">
           <ul>
-            <h1>Create 4 page separate for 4 crud functions.</h1>
+          <h3> MAIN Page</h3>
           </ul>
         </div>
         <div className="main-blog "></div>

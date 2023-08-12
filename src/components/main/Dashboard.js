@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import Alerts from "../alerts/Alerts";
 import Sidebar from "../../fragments/Sidebar";
 import Topbar from "../../fragments/Topbar";
-import Dash from "../../fragments/Dash";
+import Home from "../../fragments/Home";
+import Empty from "../../fragments/Dash4";
+
 import Crud from "../../fragments/Crud";
 import Dash3 from "../../fragments/Dash3";
-import Dash4 from "../../fragments/Dash4";
 
 const Dashboard = ({ capturedtime }) => {
   const navigate = useNavigate();
@@ -70,18 +71,18 @@ const Dashboard = ({ capturedtime }) => {
   return (
     <div className="bg-container">
       <Sidebar
-        Dash1={showDashboard1}
-        Dash2={showDashboard2}
+        Home={showDashboard1}
+        Empty={showDashboard2}
         Dash3={showDashboard3}
-        Dash4={showDashboard4}
+        Crud={showDashboard4}
       />
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
         <div className="main-container">
-          {showDashboard_1 && <Crud />}
-          {showDashboard_2 && <Dash />}
+          {showDashboard_1 && <Home />}
+          {showDashboard_2 && <Empty />}
           {showDashboard_3 && <Dash3 />}
-          {showDashboard_4 && <Dash4 />}
+          {showDashboard_4 && <Crud />}
         </div>
       </div>
 
