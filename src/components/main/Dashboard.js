@@ -5,19 +5,50 @@ import Sidebar from "../../fragments/Sidebar";
 import Topbar from "../../fragments/Topbar";
 import Dash from "../../fragments/Dash";
 import Crud from "../../fragments/Crud";
+import Dash3 from "../../fragments/Dash3";
+import Dash4 from "../../fragments/Dash4";
 
 const Dashboard = ({ capturedtime }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
-  const [showDashboard, setDashboard] = useState(true);
+  const [showDashboard_1, setDashboard1] = useState(true);
+  const [showDashboard_2, setDashboard2] = useState(false);
+  const [showDashboard_3, setDashboard3] = useState(false);
+  const [showDashboard_4, setDashboard4] = useState(false);
 
   const showDashboard1 = () => {
-    setDashboard(true);
+    setDashboard2(false)
+    setDashboard3(false)
+    setDashboard1(true);
   };
 
   const showDashboard2 = () => {
-    setDashboard(false);
+    setDashboard3(false)
+    setDashboard1(false);
+    
+    setDashboard4(false);
+    setDashboard2(true)
+  }; 
+  
+  const showDashboard3 = () => {
+    setDashboard4(false);
+    setDashboard1(false);
+    setDashboard2(false);
+    setDashboard3(true);
   };
+
+    
+  const showDashboard4 = () => {
+
+    setDashboard1(false);
+    setDashboard2(false);
+    setDashboard3(false);
+    setDashboard4(true);
+  };
+  
+
+  
+
 
   const handleOpenPopup = () => {
     setShowPopup(true);
@@ -35,23 +66,22 @@ const Dashboard = ({ capturedtime }) => {
     setShowPopup(false);
   };
 
-  const horiScroll = () => {
-    navigate("/HorizontalScroll");
-
-    return <redirect to="/HorizontalScroll" />;
-  };
 
   return (
     <div className="bg-container">
       <Sidebar
-        horiScroll={horiScroll}
         Dash1={showDashboard1}
         Dash2={showDashboard2}
+        Dash3={showDashboard3}
+        Dash4={showDashboard4}
       />
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
         <div className="main-container">
-          {showDashboard ? <Dash /> : <Crud />}
+          {showDashboard_1 && <Crud />}
+          {showDashboard_2 && <Dash />}
+          {showDashboard_3 && <Dash3 />}
+          {showDashboard_4 && <Dash4 />}
         </div>
       </div>
 
