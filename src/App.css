@@ -357,6 +357,7 @@ button {
   bottom: 20px;
 }
 
+  
 .contents {
   display: grid;
   width: 100%;
@@ -375,10 +376,18 @@ button {
   background-color: #22b07d;
   border-radius: 20px;
   overflow: auto;
-  height: 200px;
+  min-height: 200px;
+  height:fit-content;
   transition: 0.4s;
+  margin: 10px;
 }
 
+.content input,.content button{
+  align-items: center;
+  margin: 10px;
+  background-color: #1c1c28;
+  padding: 10px;
+}
 
 /* Topbar dropdown */
 
