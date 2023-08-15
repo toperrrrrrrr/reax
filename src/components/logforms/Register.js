@@ -89,11 +89,7 @@ const Register = () => {
                 );
               })}
               <form className="login-form">
-                <button
-                  type="button"
-                  className="box btn"
-                  onClick={handleNavigateLogin}
-                ></button>
+      
                 <h6> Username</h6>
                 <div className="input-box">
                   <input
