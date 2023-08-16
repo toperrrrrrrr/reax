@@ -4,52 +4,52 @@ import Alerts from "../alerts/Alerts";
 import Sidebar from "../../fragments/Sidebar";
 import Topbar from "../../fragments/Topbar";
 import Home from "../../fragments/Home";
-import Empty from "../../fragments/Dash4";
-
 import Crud from "../../fragments/Crud";
+
+import Empty from "../../fragments/Empty";
 import Dash3 from "../../fragments/Dash3";
 
 const Dashboard = ({ capturedtime }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
-  const [showDashboard_1, setDashboard1] = useState(true);
+  const [showHome, setHome] = useState(true);
+  const [showCrud, setCrud] = useState(false);
   const [showDashboard_2, setDashboard2] = useState(false);
   const [showDashboard_3, setDashboard3] = useState(false);
-  const [showDashboard_4, setDashboard4] = useState(false);
 
-  const showDashboard1 = () => {
+  const showHomeP = () => {
+    setHome(true);
+    setCrud(false);
+
     setDashboard2(false)
     setDashboard3(false)
-    setDashboard1(true);
+  };
+  
+  const showCrudP = () => {
+    setHome(false);
+    setCrud(true);
+
+    setDashboard2(false);
+    setDashboard3(false);
   };
 
   const showDashboard2 = () => {
+    setHome(false);
+    setCrud(false);
+
     setDashboard3(false)
-    setDashboard1(false);
-    
-    setDashboard4(false);
     setDashboard2(true)
   }; 
   
-  const showDashboard3 = () => {
-    setDashboard4(false);
-    setDashboard1(false);
+  const showDashboard3 = () => {  
+    setCrud(false);
+    setHome(false);
+
     setDashboard2(false);
     setDashboard3(true);
   };
 
     
-  const showDashboard4 = () => {
-
-    setDashboard1(false);
-    setDashboard2(false);
-    setDashboard3(false);
-    setDashboard4(true);
-  };
-  
-
-  
-
 
   const handleOpenPopup = () => {
     setShowPopup(true);
@@ -71,18 +71,18 @@ const Dashboard = ({ capturedtime }) => {
   return (
     <div className="bg-container">
       <Sidebar
-        Home={showDashboard1}
+        Home={showHomeP}
+        Crud={showCrudP}
         Empty={showDashboard2}
         Dash3={showDashboard3}
-        Crud={showDashboard4}
       />
       <div className="wrapper-center">
         <Topbar logout={handleOpenPopup} />
         <div className="main-container">
-          {showDashboard_1 && <Home />}
+          {showHome && <Home />}
+          {showCrud && <Crud />}
           {showDashboard_2 && <Empty />}
           {showDashboard_3 && <Dash3 />}
-          {showDashboard_4 && <Crud />}
         </div>
       </div>
 

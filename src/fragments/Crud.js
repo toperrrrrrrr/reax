@@ -25,7 +25,6 @@ export default function Crud() {
     }
   };
 
-  
   useEffect(() => {
     fetchRead();
   }, []);
@@ -54,16 +53,30 @@ export default function Crud() {
           <div className="in-content">
             <h1>Create</h1>
             <form>
-              <input type="text" placeholder="name" onChange={(e) => setName(e.target.value)}></input>
-              <input type="text" placeholder="username"  onChange={(e) => setUsername(e.target.value)}></input>
-              <input type="text" placeholder="Password"  onChange={(e) => setPassword(e.target.value)}></input>
+              <input
+                type="text"
+                placeholder="name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="username"
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
               <input
                 type="number"
                 value={numbers}
                 onChange={handleNumberChange}
                 max={100}
               />
-              <button type="button" onClick={handleCreate}>Insert</button>
+              <button type="button" onClick={handleCreate}>
+                Insert
+              </button>
             </form>
           </div>
         </div>
@@ -73,9 +86,7 @@ export default function Crud() {
             {isResponse.map((val) => {
               return (
                 <>
-                  <p>
-                {val.u_name}{" "}
-                  </p>
+                  <p>{val.u_name} </p>
                 </>
               );
             })}
