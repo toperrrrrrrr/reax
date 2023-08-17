@@ -12,8 +12,7 @@ const Topbar = ({ logout }) => {
       <div class="user-settings ">
         <img
           class="user-img"
-          src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/301266446_3419967004994019_5330432090560501717_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFk9Lk0rTvRIrh2rmVE-Bs7AYr_cB8HkJ4Biv9wHweQnlh-H-jMzPf5T_z6wOU87_Zzuv52wWrExXl-oU4rhFsE&_nc_ohc=Qr3n1gnyQ5YAX_Rw4Zh&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfBVdHTvkYtHvUxjdd3zTafL-EYnZrNR3pjahJY4n2ZcYg&oe=64C51422"
-          alt=""
+          src=""alt=""
         />
 
         <div className="dropdown">

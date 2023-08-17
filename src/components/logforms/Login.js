@@ -52,25 +52,11 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    const listener = (event) => {
-      if (event.code === "Enter") {
-        setLoggedIn(true);
-        event.preventDefault();
-        handleLogin();
-      }
-    };
-    document.addEventListener("keydown", listener);
-    return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  }, []);
-
   return (
     <>
       <div className="screen-bg">
         <div className="container-login">
-          <form className="wrap-login">
+          <form className="wrap-login" onSubmit={handleLogin}>
             <span className="signin-title"> Sign in </span>
             <div className="wrap-input">
               <span>Username</span>
@@ -90,6 +76,7 @@ const Login = () => {
                 className="inputs"
                 type={isEye}
                 placeholder={isPlaceholderPW}
+                value={isPassword}
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
