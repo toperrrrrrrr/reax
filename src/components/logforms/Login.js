@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 import Alerts from "../alerts/Alerts";
 import "../../LoginReg.css";
 import "../../fonts/material.css";
+import Axios from "axios";
 
 const Login = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -12,6 +12,7 @@ const Login = () => {
   const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
   const [isEye, setEye] = useState("password");
   const [showPopup, setShowPopup] = useState(false);
+  const [isResponse, setResponse] = useState([]);
   const navigate = useNavigate();
   let username = "admin";
   let password = "password";
@@ -52,10 +53,40 @@ const Login = () => {
     }
   };
 
+  const fetchUsername = async () => {
+    try {
+      const response = await Axios.get("http://localhost:3001/api/get/login", {
+        u_username: isUsername,
+      });
+      setResponse(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <div className="screen-bg">
         <div className="container-login">
+          <div className="wrap-login">
+            <h1>data
+            {isResponse.map((val) => {
+              return (
+                <>
+                  <p>{val.u_name} </p>
+                </>
+              );
+            })}
+            </h1>
+
+            <div>
+              <div className="wrap-login100-form-btn" onClick={fetchUsername}>
+                <div className="login100-form-bgbtn"></div>
+                <button className="login100-form-btn">fetchUsername</button>
+              </div>
+            </div>
+          </div>
+
           <form className="wrap-login" onSubmit={handleLogin}>
             <span className="signin-title"> Sign in </span>
             <div className="wrap-input">
@@ -104,6 +135,7 @@ const Login = () => {
                 <button className="login100-form-btn">Login</button>
               </div>
             </div>
+
             <div className="text-center p-t-115">
               <span className="txt1">Don’t have an account?</span>
               <a className="txt2" onClick={register}>
