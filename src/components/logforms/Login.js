@@ -53,10 +53,23 @@ const Login = () => {
     }
   };
 
+  // const fetchUsername = async () => {
+  //   try {
+  //     const response = await Axios.get("http://localhost:3001/api/get/login", {
+  //       u_username: isUsername,
+  //     });
+  //     setResponse(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
   const fetchUsername = async () => {
     try {
       const response = await Axios.get("http://localhost:3001/api/get/login", {
-        u_username: isUsername,
+        params: {
+          u_username: isUsername,
+        },
       });
       setResponse(response.data);
     } catch (error) {
@@ -69,14 +82,18 @@ const Login = () => {
       <div className="screen-bg">
         <div className="container-login">
           <div className="wrap-login">
-            <h1>data
-            {isResponse.map((val) => {
-              return (
-                <>
-                  <p>{val.u_name} </p>
-                </>
-              );
-            })}
+            <h1>
+       
+              <div>
+                <h2>User Information:</h2>
+                <ul>
+                  {response.map((user) => (
+                    <li >
+                      Username: {user.u_name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </h1>
 
             <div>
