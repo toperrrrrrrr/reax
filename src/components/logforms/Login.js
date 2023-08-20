@@ -63,19 +63,33 @@ const Login = () => {
   //     console.error(error);
   //   }
   // };
+  useEffect(() => {
+    // Make an API call when searchValue changes
+    fetchUsername();
+  }, [isUsername]);
 
   const fetchUsername = async () => {
     try {
-      const response = await Axios.get("http://localhost:3001/api/get/login", {
-        params: {
-          u_username: isUsername,
-        },
-      });
-      setResponse(response.data);
+      const response = await fetch(`/api/get/loginUname=${isUsername}`);
+      const jsonData = await response.json();
+      setResponse(jsonData);
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching data:", error);
     }
   };
+
+  // const fetchUsername = async () => {
+  //   try {
+  //     const response = await Axios.get("http://localhost:3001/api/get/login", {
+  //       params: {
+  //         u_username: isUsername,
+  //       },
+  //     });
+  //     setResponse(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <>
@@ -83,14 +97,12 @@ const Login = () => {
         <div className="container-login">
           <div className="wrap-login">
             <h1>
-       
               <div>
                 <h2>User Information:</h2>
                 <ul>
-                  {response.map((user) => (
-                    <li >
-                      Username: {user.u_name}
-                    </li>
+             
+                  {isResponse.map((item) => (
+                    <li key={item.id}>{item.u_name}</li>
                   ))}
                 </ul>
               </div>
