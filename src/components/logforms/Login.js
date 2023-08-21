@@ -12,7 +12,7 @@ const Login = () => {
   const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
   const [isEye, setEye] = useState("password");
   const [showPopup, setShowPopup] = useState(false);
-  const [isResponse, setResponse] = useState([]);
+  const [isResponse, setResponse] = useState(['hey']);
   const navigate = useNavigate();
   let username = "admin";
   let password = "password";
@@ -63,20 +63,28 @@ const Login = () => {
   //     console.error(error);
   //   }
   // };
-  useEffect(() => {
-    // Make an API call when searchValue changes
-    fetchUsername();
-  }, [isUsername]);
+  // useEffect(() => {
+  //   console.log('Fetching data for username:', isUsername);
+  
+  //   fetchUsername(); // This should trigger the API call
+  
+  //   console.log('Response data:', isResponse); // Check the fetched data
+  // }, [isUsername]);
+  
 
-  const fetchUsername = async () => {
-    try {
-      const response = await fetch(`/api/get/loginUname=${isUsername}`);
-      const jsonData = await response.json();
-      setResponse(jsonData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  // const fetchUsername = async () => {
+  //   try {
+  //     const response = await fetch(`/api/get/login`);
+  //     if (!response.ok) {
+  //       throw new Error('Network response was not ok');
+  //     }
+  //     const jsonData = await response.json();
+  //     setResponse(jsonData);
+  //   } catch (error) {
+  //     console.error('Error fetching data:', error);
+  //   }
+  // };
+  
 
   // const fetchUsername = async () => {
   //   try {
@@ -100,16 +108,19 @@ const Login = () => {
               <div>
                 <h2>User Information:</h2>
                 <ul>
-             
-                  {isResponse.map((item) => (
-                    <li key={item.id}>{item.u_name}</li>
-                  ))}
+                  {isResponse.length > 0 && (
+                    <ul>
+                      {isResponse.map((item) => (
+                        {item}
+                      ))}
+                    </ul>
+                  )}
                 </ul>
               </div>
             </h1>
 
             <div>
-              <div className="wrap-login100-form-btn" onClick={fetchUsername}>
+              <div className="wrap-login100-form-btn" >
                 <div className="login100-form-bgbtn"></div>
                 <button className="login100-form-btn">fetchUsername</button>
               </div>
