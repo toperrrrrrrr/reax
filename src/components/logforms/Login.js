@@ -12,7 +12,7 @@ const Login = () => {
   const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
   const [isEye, setEye] = useState("password");
   const [showPopup, setShowPopup] = useState(false);
-  const [isResponse, setResponse] = useState(['hey']);
+  const [isResponse, setResponse] = useState([]);
   const navigate = useNavigate();
   let username = "admin";
   let password = "password";
@@ -65,12 +65,11 @@ const Login = () => {
   // };
   // useEffect(() => {
   //   console.log('Fetching data for username:', isUsername);
-  
+
   //   fetchUsername(); // This should trigger the API call
-  
+
   //   console.log('Response data:', isResponse); // Check the fetched data
   // }, [isUsername]);
-  
 
   // const fetchUsername = async () => {
   //   try {
@@ -84,15 +83,30 @@ const Login = () => {
   //     console.error('Error fetching data:', error);
   //   }
   // };
-  
+
+
+  useEffect(() => {
+    fetchUsername();
+  }, []);
+
+  const fetchUsername = async () => {
+    try {
+      const response = await Axios.get("http://localhost:3001/api/get/login", {
+          u_username: isUsername,
+      });
+      setResponse(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
   // const fetchUsername = async () => {
+  //   const usern = isUsername;
   //   try {
-  //     const response = await Axios.get("http://localhost:3001/api/get/login", {
-  //       params: {
-  //         u_username: isUsername,
-  //       },
-  //     });
+  //     const response = await Axios.get(
+  //       `http://localhost:3001/api/get/login/${usern}`
+  //     );
   //     setResponse(response.data);
   //   } catch (error) {
   //     console.error(error);
@@ -107,20 +121,22 @@ const Login = () => {
             <h1>
               <div>
                 <h2>User Information:</h2>
-                <ul>
-                  {isResponse.length > 0 && (
-                    <ul>
-                      {isResponse.map((item) => (
-                        {item}
-                      ))}
-                    </ul>
-                  )}
-                </ul>
+                <p>
+                {isResponse.map((val) => {
+                return (
+                  <>
+                    <p>
+                    {val.iduser} {val.u_name}{" "}
+                    </p>
+                  </>
+                );
+              })}
+                </p>
               </div>
             </h1>
 
             <div>
-              <div className="wrap-login100-form-btn" >
+              <div className="wrap-login100-form-btn" onClick={fetchUsername}>
                 <div className="login100-form-bgbtn"></div>
                 <button className="login100-form-btn">fetchUsername</button>
               </div>
