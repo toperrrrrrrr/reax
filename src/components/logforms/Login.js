@@ -53,36 +53,6 @@ const Login = () => {
     }
   };
 
-  // const fetchUsername = async () => {
-  //   try {
-  //     const response = await Axios.get("http://localhost:3001/api/get/login", {
-  //       u_username: isUsername,
-  //     });
-  //     setResponse(response.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   console.log('Fetching data for username:', isUsername);
-
-  //   fetchUsername(); // This should trigger the API call
-
-  //   console.log('Response data:', isResponse); // Check the fetched data
-  // }, [isUsername]);
-
-  // const fetchUsername = async () => {
-  //   try {
-  //     const response = await fetch(`/api/get/login`);
-  //     if (!response.ok) {
-  //       throw new Error('Network response was not ok');
-  //     }
-  //     const jsonData = await response.json();
-  //     setResponse(jsonData);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
 
 
   useEffect(() => {
