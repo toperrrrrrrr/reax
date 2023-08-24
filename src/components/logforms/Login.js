@@ -71,18 +71,6 @@ const Login = () => {
   };
 
 
-  // const fetchUsername = async () => {
-  //   const usern = isUsername;
-  //   try {
-  //     const response = await Axios.get(
-  //       `http://localhost:3001/api/get/login/${usern}`
-  //     );
-  //     setResponse(response.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
   return (
     <>
       <div className="screen-bg">
