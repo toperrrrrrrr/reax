@@ -85,9 +85,7 @@ export default function Crud() {
             <h1>Read</h1>
             {isResponse.map((val) => {
               return (
-                <>
-                  <p>{val.u_name} </p>
-                </>
+                <>  <p>{val.u_name} </p></>
               );
             })}
           </div>
