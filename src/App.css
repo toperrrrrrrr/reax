@@ -412,3 +412,8 @@ button {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+.Results{
+  padding-left:20px ;
+}
