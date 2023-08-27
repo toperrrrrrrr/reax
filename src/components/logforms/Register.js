@@ -53,7 +53,8 @@ const Register = () => {
   };
 
   const handleDelete = async () => {
-    const userId = isID;
+    const userId = isID; // Replace with the actual user id
+    try {
       const response = await Axios.delete(
         `http://localhost:3001/api/delete/${userId}`
       );
