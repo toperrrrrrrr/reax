@@ -53,8 +53,6 @@ const Login = () => {
     }
   };
 
-
-
   useEffect(() => {
     fetchUsername();
   }, []);
@@ -62,14 +60,13 @@ const Login = () => {
   const fetchUsername = async () => {
     try {
       const response = await Axios.get("http://localhost:3001/api/get/login", {
-          u_username: isUsername,
+        u_username: isUsername,
       });
       setResponse(response.data);
     } catch (error) {
       console.error(error);
     }
   };
-
 
   return (
     <>
@@ -80,15 +77,15 @@ const Login = () => {
               <div>
                 <h2>User Information:</h2>
                 <p>
-                {isResponse.map((val) => {
-                return (
-                  <>
-                    <p>
-                    {val.iduser} {val.u_name}{" "}
-                    </p>
-                  </>
-                );
-              })}
+                  {isResponse.map((val) => {
+                    return (
+                      <>
+                        <p>
+                          {val.iduser} {val.u_name}{" "}
+                        </p>
+                      </>
+                    );
+                  })}
                 </p>
               </div>
             </h1>
