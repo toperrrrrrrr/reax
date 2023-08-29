@@ -391,7 +391,6 @@ button {
 
 /* Topbar dropdown */
 
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -413,7 +412,10 @@ button {
   display: block;
 }
 
-
 .Results{
   padding-left:20px ;
+}
+
+.Results:last-child{
+  padding-bottom:20px;
 }

@@ -59,9 +59,9 @@ const Login = () => {
 
   const fetchUsername = async () => {
     try {
-      const response = await Axios.get("http://localhost:3001/api/get/login", {
-        u_username: isUsername,
-      });
+      const response = await Axios.get(
+        `http://localhost:3001/api/get/login/${isUsername}`
+      );
       setResponse(response.data);
     } catch (error) {
       console.error(error);
@@ -74,19 +74,15 @@ const Login = () => {
         <div className="container-login">
           <div className="wrap-login">
             <h1>
-              <div>
+              <div className="user-information">
                 <h2>User Information:</h2>
-                <p>
-                  {isResponse.map((val) => {
-                    return (
-                      <>
-                        <p>
-                          {val.iduser} {val.u_name}{" "}
-                        </p>
-                      </>
-                    );
-                  })}
-                </p>
+                <div>
+                  {isResponse.map((val) => (
+                    <p key={val.iduser}>
+                      {val.iduser} {val.u_name}
+                    </p>
+                  ))}
+                </div>
               </div>
             </h1>
 
