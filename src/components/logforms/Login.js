@@ -16,6 +16,10 @@ const Login = () => {
   const validUsername = "admin";
   const validPassword = "password";
 
+  useEffect(() => {
+    fetchUsername();
+  }, []);
+
   const handleOpenPopup = () => {
     setShowPopup(true);
   };
@@ -61,9 +65,6 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    fetchUsername();
-  }, []);
 
   return (
     <div className="screen-bg">
@@ -115,7 +116,7 @@ const Login = () => {
             <span
               className="loginicons"
               onClick={togglePasswordVisibility}
-              data-symbol="&#xf15c;"
+              data-symbol="&#xf15c;"  
             ></span>
           </div>
 
