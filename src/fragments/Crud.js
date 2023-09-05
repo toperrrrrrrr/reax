@@ -16,6 +16,12 @@ export default function Crud() {
     }
   };
 
+const clearr = ()=> {
+  setName("")
+  setPassword("")
+  setUsername("")
+}
+
   const fetchRead = async () => {
     try {
       const response = await Axios.get("http://localhost:3001/api/get");
@@ -39,6 +45,7 @@ export default function Crud() {
       });
       console.log("Successfully inserted");
       fetchRead();
+      clearr();
     } catch (error) {
       console.error(error);
     }
@@ -55,17 +62,20 @@ export default function Crud() {
             <form>
               <input
                 type="text"
+                value={isName}
                 placeholder="name"
                 onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="username"
+                value={isUsername}
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Password"
+                value={isPassword}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <input
@@ -74,7 +84,7 @@ export default function Crud() {
                 onChange={handleNumberChange}
                 max={100}
               />
-              <button type="button" onClick={handleCreate}>
+              <button type="button" onClick={handleCreate} >
                 Insert
               </button>
             </form>
